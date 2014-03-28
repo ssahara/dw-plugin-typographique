@@ -1,0 +1,7 @@
+base  typographique
+name  Typography plugin v0.1101
+author Paweł Piekarski
+email  <qentinson@gmail.com>
+date   2011-01-18
+desc   Empower dokuwiki with html typographic abilities.
+url    http://treecode.pl/typography.html
