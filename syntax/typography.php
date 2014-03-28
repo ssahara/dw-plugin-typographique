@@ -1,7 +1,6 @@
 <?php
 /**
- * Plugin Color: Sets new colors for text and background.
- * Plugin Block: Allows to set width and float alignment for page elements.
+ * Plugin Typography
  * 
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  * @author     Paweł Piekarski <qentinson@gmail.com>
@@ -12,7 +11,7 @@ if(!defined('DOKU_INC')) die();
 if(!defined('DOKU_PLUGIN')) define('DOKU_PLUGIN',DOKU_INC.'lib/plugins/');
 require_once(DOKU_PLUGIN.'syntax.php');
  
-class syntax_plugin_typography extends DokuWiki_Syntax_Plugin {
+class syntax_plugin_typographique_typography extends DokuWiki_Syntax_Plugin {
 
 	function getInfo(){
 		return array(
