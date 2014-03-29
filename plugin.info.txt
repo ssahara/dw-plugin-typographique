@@ -1,7 +1,7 @@
 base  typographique
-name  Typography plugin v0.1101
-author Paweł Piekarski
-email  <qentinson@gmail.com>
-date   2011-01-18
-desc   Empower dokuwiki with html typographic abilities.
+name  Typographique
+author Satoshi Sahara
+email  <sahara.satoshi@gmail.com>
+date   2014-03-29
+desc   Empower DokuWiki with html typographic abilities. Typographique is extended version of the original Typography plugin v0.1101 by Paweł Piekarski.
 url    http://treecode.pl/typography.html
