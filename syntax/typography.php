@@ -14,7 +14,7 @@ require_once(DOKU_PLUGIN.'syntax.php');
 
 class syntax_plugin_typographique_typography extends DokuWiki_Syntax_Plugin {
 
-    protected $entry_pattern = '<typo.*?>(?=.*?</typo>)';
+    protected $entry_pattern = '<typo(?: .+?)?>(?=.+?</typo>)';
     protected $exit_pattern  = '</typo>';
 
     var $pluginMode, $props, $cond;
@@ -74,7 +74,7 @@ class syntax_plugin_typographique_typography extends DokuWiki_Syntax_Plugin {
         switch($state) {
             case DOKU_LEXER_ENTER:
                 $markup = substr($this->exit_pattern, 2, -1);
-                $params = strstr(substr($match, 1, -1), ' ');
+                $params = trim(strstr(substr($match, 1, -1), ' '));
 
                 if ($params == false) return array($state, '');
                 $tokens = explode(';', $params);
@@ -82,7 +82,7 @@ class syntax_plugin_typographique_typography extends DokuWiki_Syntax_Plugin {
                     // for inherited syntax class usage: <fs small>...</fs>
                     $tokens[0] = $markup.':'.$tokens[0];
                 }
-                // msg('token:'.var_export($tokens, true), 0);
+                //msg('markup:'.$markup.' tokens='.var_export($tokens, true), 0);
 
                 $css = '';
                 foreach($tokens as $token) {
