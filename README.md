@@ -11,8 +11,16 @@ It gives ability to adjust settings for text look, but does not influence subtle
 Syntax
 ------
 
-`<typo parameters>beatifull looking test</typo>` where parameters are semicolon separated name:value;
+`<typo parameters>`beatifull looking test`</typo>` where parameters are semicolon separated name:value;
 
+| functionality  | parameter syntax |
+|:--             |:--               |
+|font family     | `<typo ff:Coma separated, font famliy names, can contain spaces;>`Text`</typo>` |
+|font variant    | `<typo fv:smallcaps;>`Text`</typo>` |
+|font size       | `<typo fs:20px;>`Text`</typo>` |
+|line height     | `<typo lh:20px;>`Text`</typo>` |
+|letter spacing  | `<typo ls:20px;>`Text`</typo>` |
+|spacing between word  | `<typo ws:20px;>`Text`</typo>` |
 
 
 ----
