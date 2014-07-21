@@ -2,6 +2,6 @@ base  typographique
 name  Typographique
 author Satoshi Sahara
 email  <sahara.satoshi@gmail.com>
-date   2014-03-29
+date   2014-07-21
 desc   Empower DokuWiki with html typographic abilities. Typographique is extended version of the original Typography plugin v0.1101 by Paweł Piekarski.
 url    http://treecode.pl/typography.html
