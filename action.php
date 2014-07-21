@@ -22,7 +22,7 @@ class action_plugin_typographique extends DokuWiki_Action_Plugin {
      * Adds FontColor toolbar button
      * @see https://www.dokuwiki.org/plugin:fontcolor
      */
-    public function fontColorToolbar(&$event, $param) {
+    public function fontColorToolbar(Doku_Event &$event, $param) {
         $colors = array(
             'Yellow' => '#ffff00',
             'Red' => '#ff0000',
@@ -77,7 +77,7 @@ class action_plugin_typographique extends DokuWiki_Action_Plugin {
      * Adds FontSize toolbar button
      * @see https://www.dokuwiki.org/plugin:fontsize2
      */
-    public function fontSizeToolbar(&$event, $param) {
+    public function fontSizeToolbar(Doku_Event &$event, $param) {
         $options = array(
             'xxs'     => 'xx-small',
             'xs'      =>  'x-small',

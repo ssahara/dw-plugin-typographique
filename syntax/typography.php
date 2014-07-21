@@ -17,9 +17,9 @@ class syntax_plugin_typographique_typography extends DokuWiki_Syntax_Plugin {
     protected $entry_pattern = '<typo(?: .+?)?>(?=.+?</typo>)';
     protected $exit_pattern  = '</typo>';
 
-    var $pluginMode, $props, $cond;
+    protected $pluginMode, $props, $cond;
 
-    function __construct() {
+    public function __construct() {
         $this->pluginMode = implode('_', array('plugin',$this->getPluginName(),$this->getPluginComponent(),));
 
         $this->props = array(
@@ -54,22 +54,22 @@ class syntax_plugin_typographique_typography extends DokuWiki_Syntax_Plugin {
         );
     }
 
-    function getType(){  return 'formatting'; }
-    function getSort() { return 67; } // = Doku_Parser_Mode_formatting:strong -3
-    function getAllowedTypes() { return array('formatting', 'substition', 'disabled'); }
+    public function getType(){  return 'formatting'; }
+    public function getSort() { return 67; } // = Doku_Parser_Mode_formatting:strong -3
+    public function getAllowedTypes() { return array('formatting', 'substition', 'disabled'); }
 
     // Connect pattern to lexer
-    function connectTo($mode) {
+    public function connectTo($mode) {
         $this->Lexer->addEntryPattern($this->entry_pattern, $mode,$this->pluginMode);
     }
-    function postConnect() {
+    public function postConnect() {
         $this->Lexer->addExitPattern($this->exit_pattern, $this->pluginMode);
     }
 
     /*
      * Handle the match
      */
-    function handle($match, $state, $pos, &$handler) {
+    public function handle($match, $state, $pos, Doku_Handler &$handler) {
 
         switch($state) {
             case DOKU_LEXER_ENTER:
@@ -105,7 +105,7 @@ class syntax_plugin_typographique_typography extends DokuWiki_Syntax_Plugin {
     /*
      * Create output
      */
-    function render($format, &$renderer, $data) {
+    public function render($format, Doku_Renderer &$renderer, $data) {
         if ($format != 'xhtml') return false;
 
         list($state, $match) = $data;
