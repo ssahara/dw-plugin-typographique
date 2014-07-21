@@ -11,7 +11,7 @@ It gives ability to adjust settings for text look, but does not influence subtle
 Syntax
 ------
 
-`<typo parameters>`beatifull looking test`</typo>` where parameters are semicolon separated name:value;
+`<typo parameters>`beautiful looking test`</typo>` where parameters are semicolon separated name:value;
 
 | functionality  | parameter syntax |
 |:--             |:--               |
