@@ -57,6 +57,11 @@ class syntax_plugin_typographique_typography extends DokuWiki_Syntax_Plugin {
     public function getType(){  return 'formatting'; }
     public function getSort() { return 67; } // = Doku_Parser_Mode_formatting:strong -3
     public function getAllowedTypes() { return array('formatting', 'substition', 'disabled'); }
+    // override default accepts() method to allow nesting - ie, to get the plugin accepts its own entry syntax
+    public function accepts($mode) {
+        if ($mode == substr(get_class($this), 7)) return true;
+        return parent::accepts($mode);
+    }
 
     // Connect pattern to lexer
     public function connectTo($mode) {
